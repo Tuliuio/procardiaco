@@ -1,0 +1,29 @@
+# ============================================================
+#  Clínica Procardíaco — entrega estática
+# ============================================================
+
+# --- Mitigação de compressão do CDN -------------------------
+# A compressão zstd do CDN (Hostinger/hcdn) estava corrompendo
+# páginas HTML de forma intermitente, gerando telas em branco.
+# "no-transform" instrui intermediários a NÃO recomprimir /
+# transformar a resposta, evitando o zstd defeituoso.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-transform, public, max-age=600"
+  </FilesMatch>
+</IfModule>
+
+# --- Páginas de erro amigáveis (opcional) -------------------
+# ErrorDocument 404 /404.html
+
+# --- Cache longo para assets estáticos ----------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 30 days"
+</IfModule>
