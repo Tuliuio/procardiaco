@@ -117,13 +117,13 @@ def page(rel, title, desc, body, extra_ld=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css">{ld}
+<link rel="stylesheet" href="/assets/css/site.css?v=2">{ld}
 </head>
 <body>
 {header()}
 {body}
 {footer()}
-<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/site.js?v=2" defer></script>
 </body>
 </html>
 """
@@ -152,11 +152,12 @@ def byline():
   </div>
 </div>"""
 
-def cta_side(msg):
+def cta_side(msg, exame=""):
+    dx = f' data-exame="{exame}"' if exame else ""
     return f"""<div class="side-card side-card--cta">
     <h3>Agende seu exame</h3>
     <p>Rápido e sem complicação, direto pela nossa equipe.</p>
-    <a class="btn btn--wa btn--block" href="{wa(msg)}" target="_blank" rel="noopener">{IC['wa']} Falar no WhatsApp</a>
+    <a class="btn btn--wa btn--block"{dx} href="{wa(msg)}" target="_blank" rel="noopener">{IC['wa']} Falar no WhatsApp</a>
     <a class="btn btn--outline-light btn--block" href="tel:+555330277377" style="margin-top:10px;">Ligar: 53 3027.7377</a>
   </div>"""
 
@@ -390,7 +391,7 @@ def build_exam(e):
       </article>
       <aside class="side">
         {side_facts(e['facts'])}
-        {cta_side(f"Olá! Gostaria de agendar um(a) {e['nome']}.")}
+        {cta_side(f"Olá! Gostaria de agendar: {e['nome']}.", e['nome'])}
         <div class="side-card">
           <h3>Outros exames</h3>
           <div style="display:grid; gap:10px;">{rel_html}</div>
@@ -583,7 +584,7 @@ def build_convenios():
       <p>A disponibilidade do convênio pode variar em função do exame específico — por favor, entre em contato para maiores detalhes. Para <strong>consultas médicas</strong>, o atendimento é exclusivamente particular.</p>
     </div>
     <div style="text-align:center; margin-top:34px;">
-      <a class="btn btn--wa btn--lg" href="{wa('Olá! Gostaria de confirmar se meu convênio é atendido.')}" target="_blank" rel="noopener">{IC['wa']} Confirmar meu convênio</a>
+      <a class="btn btn--wa btn--lg wa-direct" href="{wa('Olá! Gostaria de confirmar se meu convênio é atendido.')}" target="_blank" rel="noopener">{IC['wa']} Confirmar meu convênio</a>
     </div>
   </div>
 </section>"""
