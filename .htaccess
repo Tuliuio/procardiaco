@@ -13,6 +13,10 @@
   </FilesMatch>
 </IfModule>
 
+# --- Redirecionamentos ---------------------------------------
+# Holter e MAPA foram separados em duas páginas (revisão out/2026).
+RedirectMatch 301 ^/exames-realizados/holter-e-mapa/?$ /exames-realizados/holter/
+
 # --- Páginas de erro amigáveis (opcional) -------------------
 # ErrorDocument 404 /404.html
 

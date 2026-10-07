@@ -19,7 +19,8 @@ contato/                        # Localização e contato
 exames-realizados/              # Serviços (índice) + páginas de cada exame
   ├── ecocardiograma/
   ├── ecg/
-  ├── holter-e-mapa/
+  ├── holter/
+  ├── mapa/
   ├── eco-carotidas-vertebrais/
   ├── eco-mmii/
   └── eco-te/

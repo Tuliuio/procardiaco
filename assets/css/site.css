@@ -349,8 +349,14 @@ body.nav-open .nav-toggle span::after { transform: rotate(-45deg); }
 .footer-social a { width: 42px; height: 42px; border-radius: 11px; background: rgba(255,255,255,.08); display: grid; place-items: center; color: #fff; }
 .footer-social a:hover { background: var(--magenta); }
 .footer-social svg { width: 20px; height: 20px; }
-.footer-bottom { margin-top: 46px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1);
+.footer-legal { margin-top: 46px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1);
+  display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: .82rem; color: #7E93B8; }
+.footer-bottom { margin-top: 14px; padding-top: 14px;
   display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; font-size: .86rem; color: #7E93B8; }
+.site-footer .footer-note { max-width: none; margin-top: 18px; padding: 14px 18px; border-radius: 12px;
+  background: rgba(255,255,255,.06); border-left: 3px solid var(--magenta); font-size: .86rem; color: #C9D6EC; }
+.footer-note strong { color: #fff; }
+.site-footer .footer-disclaimer { max-width: none; margin-top: 10px; font-size: .8rem; color: #7E93B8; }
 
 /* Floating WhatsApp ------------------------------------------------------- */
 .wa-float {
@@ -435,6 +441,8 @@ body.modal-open { overflow: hidden; }
 .prose strong { color: var(--ink); }
 .info-box { background: var(--sky-soft); border: 1px solid #CDE9F5; border-left: 4px solid var(--sky); border-radius: var(--radius); padding: 22px 24px; }
 .info-box h3 { margin-top: 0; color: var(--navy); }
+.info-box--alert { background: #FDF0F6; border-color: #F6D3E4; border-left-color: var(--magenta); }
+.info-box--alert h3 { color: var(--magenta-dark); }
 
 /* Article layout (internal pages) ---------------------------------------- */
 .article-layout { display: grid; grid-template-columns: 1.65fr 1fr; gap: 54px; align-items: start; }
