@@ -587,9 +587,10 @@ build_instalacoes()
 # ============================================================================
 #  CONVÊNIOS
 # ============================================================================
-CONV = ["Andaluz","Casembrapa","Cabergs","DS Saúde","Amor Saúde","ABAPP","Cartão de Todos",
+CONV = ["Andaluz","DS Saúde","Amor Saúde","ABAPP","Cartão de Todos",
  "Policlínica Pelotense","DescontSaúde","Canal Card","Segmed","Liga Operária","Master Desconto",
- "Vida Card","IPERGS","Pró-Vida","Docctor Med","Angelus","Pax","Policlínica Reunidas","Círculo Operário"]
+ "Vida Card","IPERGS","Pró-Vida","Docctor Med","Angelus","Pax","Policlínica Reunidas","Círculo Operário",
+ "Centro Clínico Santa Casa","Saúde Familiar","Sindicato Rural","Unimed"]
 def build_convenios():
     items = "".join(
         f'<div class="conv"><span class="tick">{IC["check"]}</span>{c}</div>' for c in CONV)
