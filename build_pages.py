@@ -510,9 +510,9 @@ build_clinica()
 DOCS = [
  ("Dr. Daniel Ribeiro","/assets/img/dr-daniel.webp","Cardiologista · Ecocardiografista",
   "Mestre e Doutor em Cardiologia pelo Instituto de Cardiologia do Rio Grande do Sul e Professor Adjunto de Cardiologia da UFPel. Possui Especialização em Ecocardiografia pelo Instituto de Cardiologia do RS e Título de Especialista em Ecocardiografia pela Sociedade Brasileira de Cardiologia."),
- ("Dr. Eduardo Gehling Bertoldi","/assets/img/dr-eduardo.webp","Cardiologista · Responsável Técnico",
+ ("Dr. Eduardo Gehling Bertoldi","/assets/img/dr-eduardo.webp","Cardiologista · Ecocardiografista · Responsável Técnico",
   "Médico cardiologista e ecocardiografista, responsável técnico da clínica. Mestre e Doutor em Cardiologia pela UFRGS, é docente no Programa de Pós-Graduação em Cardiologia da UFRGS e professor associado da Faculdade de Medicina da UFPel."),
- ("Dr. Winder Marconsini Soares","/assets/img/dr-winder.jpg","Cardiologista",
+ ("Dr. Winder Marconsini Soares","/assets/img/dr-winder.jpg","Cardiologista · Ecocardiografista",
   "Médico cardiologista pelo Hospital de Base do Distrito Federal (IHBDF), com atuação dedicada à avaliação clínica cardiovascular dos pacientes da clínica."),
  ("Dr. Otávio Oliveira Guimarães","/assets/img/dr-otavio.jpg","Cardiologista · Ecocardiografista",
   "Médico formado pela Universidade Federal de Pelotas, com residência médica em Cardiologia e Ecocardiografia pelo Instituto de Cardiologia — Fundação Universitária de Cardiologia do Rio Grande do Sul (ICFUC)."),
