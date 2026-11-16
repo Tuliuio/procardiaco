@@ -8,6 +8,19 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://clinicaprocardiaco.com"
 WA_NUM = "5553991431183"
 
+# Google Tag Manager (container GTM-MG7KLTTG). Strings puras — chaves do JS não quebram a f-string do template.
+GTM_HEAD = """<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MG7KLTTG');</script>
+<!-- End Google Tag Manager -->"""
+GTM_BODY = """<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MG7KLTTG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->"""
+
 def wa(msg="Olá! Vim pelo site e gostaria de agendar um exame."):
     from urllib.parse import quote
     return f"https://wa.me/{WA_NUM}?text={quote(msg)}"
@@ -110,6 +123,7 @@ def page(rel, title, desc, body, extra_ld=""):
     html = f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+{GTM_HEAD}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
@@ -128,6 +142,7 @@ def page(rel, title, desc, body, extra_ld=""):
 <link rel="stylesheet" href="/assets/css/site.css?v=3">{ld}
 </head>
 <body>
+{GTM_BODY}
 {header()}
 {body}
 {footer()}
